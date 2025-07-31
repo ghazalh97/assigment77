@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 25%, #f4a460 50%, #deb887 75%, #f5deb3 100%);
+  min-height: 100vh;
+  color: #2c1810;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.cafe-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ghazaleh {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #8b4513, #d2691e, #cd853f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+}
+
+.cafe-text {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #8b4513;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #a0522d;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f5deb3, #deb887);
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.role-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-badge.admin {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: white;
+}
+
+.role-badge.user {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  color: white;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #5d4037;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #deb887;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 5px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #deb887, #d2691e);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #8b4513;
+  color: #8b4513;
+}
+
+.btn-outline:hover {
+  background: #8b4513;
+  color: white;
+}
+
+.login-hint {
+  text-align: center;
+  margin-top: 15px;
+  color: #a0522d;
+}
+
+.order-summary {
+  background: linear-gradient(135deg, #f5deb3, #deb887);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #8b4513;
+}
+
+.final-bill {
+  background: linear-gradient(135deg, #98fb98, #90ee90);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 5px solid #228b22;
+  font-weight: 500;
+}
+
+.discount-applied {
+  color: #228b22;
+  font-weight: 600;
+}
+
+.total-highlight {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #8b4513;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .ghazaleh {
+    font-size: 2rem;
+  }
+
+  .cafe-text {
+    font-size: 1.5rem;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Animation for smooth transitions */
+.section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
